@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]">
+  <parameter name="fname" value="meenu"/>
+  <parameter name="password" value="admin123"/>
+  <parameter name="lname" value="Auti"/>
+  <parameter name="browsertype" value="firefox"/>
+  <parameter name="mname" value="abc"/>
+  <parameter name="username" value="admin"/>
+  <test parallel="tests" name="Test in firefox browser(failed)">
+    <parameter name="browsertype" value="firefox"/>
+    <groups>
+      <run>
+        <include name="LoginPage"/>
+        <include name="HomePage"/>
+        <include name="PIMPage"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="practice.Demo1">
+        <methods>
+          <include name="createNewEmployee" invocation-numbers="0"/>
+          <include name="validateUerisOnPimPAge"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="validateHomePageTitle"/>
+          <include name="validateLogo"/>
+          <include name="loginFunctionality"/>
+          <include name="validateHomePageUrl"/>
+          <include name="searchEmployeeonPIMPage"/>
+        </methods>
+      </class> <!-- practice.Demo1 -->
+    </classes>
+  </test> <!-- Test in firefox browser(failed) -->
+</suite> <!-- Failed suite [Suite] -->
